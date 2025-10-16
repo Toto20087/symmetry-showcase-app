@@ -13,6 +13,7 @@ class ArticleModel extends ArticleEntity {
     String ? urlToImage,
     String ? publishedAt,
     String ? content,
+    String ? userId,
   }): super(
     id: id,
     author: author,
@@ -22,6 +23,7 @@ class ArticleModel extends ArticleEntity {
     urlToImage: urlToImage,
     publishedAt: publishedAt,
     content: content,
+    userId: userId,
   );
 
   factory ArticleModel.fromJson(Map < String, dynamic > map) {
@@ -33,6 +35,7 @@ class ArticleModel extends ArticleEntity {
       urlToImage: map['urlToImage'] != null && map['urlToImage'] != "" ? map['urlToImage'] : kDefaultImage,
       publishedAt: map['publishedAt'] ?? "",
       content: map['content'] ?? "",
+      userId: map['userId'] ?? "",
     );
   }
 
@@ -45,7 +48,8 @@ class ArticleModel extends ArticleEntity {
       url: entity.url,
       urlToImage: entity.urlToImage,
       publishedAt: entity.publishedAt,
-      content: entity.content
+      content: entity.content,
+      userId: entity.userId,
     );
   }
 }

@@ -2,6 +2,19 @@ rules_version = '2';
 
 service firebase.storage {
   match /b/{bucket}/o {
-    //TODO: WRITE ANY NECESSARY STORAGE RULES HERE
+
+    // Rules for article images in media/articles/{articleId}/{fileName}
+    match /media/articles/{articleId}/{fileName} {
+      // Allow anyone to read article images
+      allow read: if true;
+
+      // Allow anyone to upload images (for now - you can add authentication later)
+      // Validate file is an image and size is less than 5MB
+      allow write: if request.resource.size < 5 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+
+      // Allow deletions (you can restrict this later)
+      allow delete: if true;
     }
+  }
 }

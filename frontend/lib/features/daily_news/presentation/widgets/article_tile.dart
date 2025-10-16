@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import '../../domain/entities/article.dart';
 
 class ArticleWidget extends StatelessWidget {
@@ -112,6 +113,8 @@ class ArticleWidget extends StatelessWidget {
                 child: Text(
                   article!.description ?? '',
                   maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 14),
                 ),
               ),
             ),
