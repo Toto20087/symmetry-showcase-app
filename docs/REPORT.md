@@ -201,7 +201,9 @@ The implemented schema includes:
 
 ### Screenshots and Videos
 
-_Note: Screenshots and videos are in the following figma file:_
+_Note: Screenshots are in the following figma file:https://www.figma.com/design/q5JFUYyvFJu5D4e7zE4leI/SYMMETRY-DESIGN?node-id=0-1&t=OQgVsxm3brWvQUNt-1_
+
+_Note: The video is inside of the following link:https://youtu.be/pbl5oyFeMBQ_
 
 - Login/Registration screens
 - Home page with article feed
